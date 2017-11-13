@@ -76,7 +76,7 @@ $(document).ready(function() {
   $('.sticky .state-1 .button').on('click', function(e) {
     e.preventDefault();
     $('.sticky .state-1').hide();
-    $('.sticky .state-2').show();
+    $('.sticky .state-2').addClass('show');
   });
 
   $(".partagez-slider").slick({
@@ -90,12 +90,14 @@ $(document).ready(function() {
 
   $(".quiz-result-slider").slick({
 				 arrows: false,
-				 draggable: false
+				 draggable: false,
+				 swipe: false
   });
 
   $(".quiz-slider").slick({
 			  arrows: false,
-			  draggable: false
+			  draggable: false,
+			  swipe: false
   });
 
   $(".quiz .prev-slider").on('click', function(e) {
