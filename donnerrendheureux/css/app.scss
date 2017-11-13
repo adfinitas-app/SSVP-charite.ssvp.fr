@@ -368,6 +368,17 @@ section.quiz {
   .button {
     width: 270px;
   }
+  .slider-desktop {
+    display: none;
+  }
+  @media screen and (min-width: 40em) {
+    .slider-desktop {
+      display: block;
+    }
+    .slider-mobile {
+      display: none;
+    }
+  }
 }
 
 .error {
