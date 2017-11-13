@@ -71,10 +71,7 @@ p {
   }
   .button {
     pointer-events: visible;
-  }
-  .state-2 .button:nth-child(3) {
-    padding-left: 45px;
-    padding-right: 45px;
+    width: 330px;
   }
 }
 
@@ -91,6 +88,14 @@ p {
   &:hover {
     background-color: #c0915c;
   }
+  &.selected {
+    background-color: #14679e !important;
+  }
+}
+
+.buttons .button:hover,
+.partagez .button:hover {
+  background-color: #14679e;
 }
 
 header {
@@ -142,14 +147,24 @@ section.partagez {
       color: #c49158;
       font-size: 20px;
       margin-bottom: 40px;
+      line-height: 1.2;
     }
     .name {
       @extend .font-reg;
       color: #ababab;
       font-size: 18px;
+      line-height: 1.2;
     }
     .main {
       margin-bottom: 50px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+    .don-150 {
+      display: block;
+      color: #c49158;
+      margin-top: 20px;
+      line-height: 1.2;
     }
   }
   h2 {
@@ -174,6 +189,9 @@ section.quiz {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
+  h2 {
+    font-size: 50px;
+  }
   .slick-track {
     display: flex;
     align-items: center;
@@ -192,16 +210,17 @@ section.quiz {
     .subtitle {
       margin-bottom: 0;
       line-height: 1;
-      font-size: 14px;
+      font-size: 16px;
     }
     .text {
       margin-top: 30px;
       margin-bottom: 0;
-      font-size: 20px;
-      @extend .font-bold;
+      font-size: 24px;
+      line-height: 1.2;
+      //@extend .font-bold;
     }
     .subtext {
-      font-size: 14px;
+      font-size: 16px;
       margin-bottom: 30px;
     }
   }
@@ -339,6 +358,13 @@ section.result-quiz {
   .gifts > * {
     display: none;
   }
+  .main {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
 }
 
 .grid-gift {
@@ -414,6 +440,7 @@ section.result-quiz {
   }
   .deduction-row {
     justify-content: center;
+    position: relative;
   }
   .circle {
     background-image: url("../img/percent.png");

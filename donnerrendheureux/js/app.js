@@ -13,6 +13,11 @@ $(document).ready(function() {
     $(e).removeClass('animate');
     $(e).removeClass($(e).data('animation'));
   });
+
+  $('.buttons .button, .partagez .button').on('click', function(e) {
+    $(this).addClass('selected')
+  });;
+
   var products;
   // 0 => serviette
   // 1 => mug
@@ -77,7 +82,10 @@ $(document).ready(function() {
   $(".partagez-slider").slick({
 			      nextArrow: $('.partagez .next-slider'),
 			      prevArrow: $('.partagez .prev-slider'),
-			      arrows: true
+			      arrows: true,
+			      slidesToScroll: 1,
+			      autoplay: true,
+			      autoplaySpeed: 3000,
   });
 
   $(".quiz-result-slider").slick({
@@ -134,7 +142,7 @@ $(document).ready(function() {
     }
   });
 
-  $(".result-quiz").on('click', function(e) {
+  $(".result-quiz-btn").on('click', function(e) {
     e.preventDefault();
     var $elem = $('input[name="quiz-5"]:checked');
     if ($elem.length == 0) {
