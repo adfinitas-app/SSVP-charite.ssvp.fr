@@ -485,3 +485,9 @@ footer {
     display: inline-block;
   }
 }
+.reveal-anim {
+  visibility: hidden;
+}
+.reveal-anim.animate {
+  visibility: visible;
+}

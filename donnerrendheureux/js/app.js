@@ -1,6 +1,18 @@
 $(document).foundation()
 $(document).ready(function() {
-  new WOW().init();
+  var os = new OnScreen({
+			tolerance: 0,
+			debounce: 0,
+			container: window
+  });
+  os.on('enter', '.onscreen', function(e) {
+    $(e).addClass('animate');
+    $(e).addClass($(e).data('animation'));
+  });
+  os.on('leave', '.onscreen', function(e) {
+    $(e).removeClass('animate');
+    $(e).removeClass($(e).data('animation'));
+  });
   var products;
   // 0 => serviette
   // 1 => mug
@@ -35,7 +47,8 @@ $(document).ready(function() {
   });
 
   $.ajax({
-	 url: 'http://localhost:3000', // TODO: Change
+	 //url: 'http://localhost:3000',
+	 url: 'https://herokuapp.com/', // TODO: Change
 	 dataType: 'json',
 	 success: function(data) {
 	   if (data.error == true) {
