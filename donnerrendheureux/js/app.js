@@ -48,7 +48,7 @@ $(document).ready(function() {
 
   $.ajax({
 	 //url: 'http://localhost:3000',
-	 url: 'https://herokuapp.com/', // TODO: Change
+	 url: 'https://ssvp-noel2017-api-products.herokuapp.com/',
 	 dataType: 'json',
 	 success: function(data) {
 	   if (data.error == true) {
