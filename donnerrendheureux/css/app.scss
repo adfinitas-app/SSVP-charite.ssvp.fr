@@ -523,9 +523,11 @@ section.result-quiz {
       background-color: white;
     }
   }
-  .deduction-row {
-    justify-content: center;
-    position: relative;
+  @media screen and (min-width: 64em) {
+    .deduction-row {
+      justify-content: center;
+      position: relative;
+    }
   }
   .circle {
     background-image: url("../img/percent.png");
@@ -599,6 +601,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    text-align: center;
     p {
       @extend .font-bold;
     }
