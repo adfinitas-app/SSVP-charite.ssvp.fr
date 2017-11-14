@@ -16,6 +16,10 @@
 :focus {outline:none;}
 ::-moz-focus-inner {border:0;}
 
+.nonbreak {
+  white-space: nowrap
+}
+
 .title {
   @extend .font-bold;
   text-transform: uppercase;
@@ -39,7 +43,7 @@
     .first {
       font-size: 100px;
       @media screen and (max-width: 39.9375em) {
-	font-size: 70px;
+	font-size: 60px;
       }
     }
     .second {
@@ -76,6 +80,7 @@ p {
 
 .logo {
   width: 270px;
+  height: 82px;
 }
 
 .sticky {
