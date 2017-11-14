@@ -85,7 +85,7 @@ $(document).ready(function() {
 			      arrows: true,
 			      slidesToScroll: 1,
 			      autoplay: true,
-			      autoplaySpeed: 3000,
+			      autoplaySpeed: 6000,
   });
 
   $(".quiz-result-slider").slick({

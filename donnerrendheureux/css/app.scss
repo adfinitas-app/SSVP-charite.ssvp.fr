@@ -108,7 +108,7 @@ p {
       padding: 12px;
     }
     @media screen and (min-width: 64em) {
-      width: 330px;
+      width: 335px;
     }
   }
 }
@@ -472,6 +472,9 @@ section.result-quiz {
       right: 20px;
     }
   }
+  p {
+    color: black;
+  }
   .middle-star {
     position: absolute;
     left: 31%;
@@ -644,4 +647,26 @@ footer {
 }
 .reveal-anim.animate {
   visibility: visible;
+}
+
+.next-slider img, .prev-slider img {
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(0.8);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(0.8);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(0.8);
+  transition: all 200ms ease-in;
+  transform: scale(0.8);
+}
+
+.next-slider img:hover, .prev-slider img:hover {
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);
 }
