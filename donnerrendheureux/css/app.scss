@@ -61,9 +61,12 @@
     display: block;
   }
 }
-@media screen and (max-width: 39.9375em) {
+.hide-mobile {
+  display: none;
+}
+@media screen and (min-width: 64em) {
   .hide-mobile {
-    display: none;
+    display: block;
   }
 }
 
@@ -90,6 +93,7 @@ p {
   .state-2.show {
     display: block;
     @media screen and (max-width: 39.9375em) {
+      display: -webkit-flex;
       display: flex;
     }
   }
@@ -186,9 +190,13 @@ section.partagez {
     padding-top: 60px;
     padding-bottom: 50px;
   }
-  @media screen and (max-width: 39.9375em) {
-    .photo {
-      margin-bottom: 10px;
+  .photo img {
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: 64em) {
+    .photo img {
+      margin: 0;
     }
   }
   .content {
@@ -248,7 +256,9 @@ section.quiz {
     font-size: 50px;
   }
   .slick-track {
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
     align-items: center;
   }
   .grid-x {
@@ -415,7 +425,9 @@ section.result-quiz {
     margin-top: 20px;
   }
   .photo-column {
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
     align-items: center;
   }
   .photo {
@@ -453,6 +465,7 @@ section.result-quiz {
     position: relative;
     bottom: 0;
     right: 0;
+    text-align: center;
     @media screen and (min-width: 64em) {
       position: absolute;
       bottom: 25px;
@@ -536,8 +549,10 @@ section.result-quiz {
     width: 151px;
     padding: 20px;
     text-align: center;
-    @media screen and (max-width: 39.9375em) {
-      margin-bottom: 10px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    @media screen and (min-width: 64em) {
+      margin: 0;
     }
   }
   .circle p {
@@ -560,7 +575,9 @@ section.result-quiz {
     }
   }
   .deduction-row .text {
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
     align-items: center;
   }
 }
@@ -580,8 +597,11 @@ footer {
   padding-bottom: 30px;
   color: white;
   .links {
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: row;
     flex-direction: row;
+    -webkit-justify-content: space-around;
     justify-content: space-around;
     text-align: center;
     padding: 0 55px;
@@ -598,10 +618,14 @@ footer {
     }
   }
   .share {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     text-align: center;
+    @media screen and (min-width: 64em) {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      justify-content: space-between;
+    }
     p {
       @extend .font-bold;
     }
