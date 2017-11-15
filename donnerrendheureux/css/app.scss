@@ -99,6 +99,7 @@ p {
     display: block;
     @media screen and (max-width: 39.9375em) {
       display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
     }
   }
@@ -245,6 +246,8 @@ section.partagez {
   }
 }
 .slide-row {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -262,13 +265,23 @@ section.quiz {
   }
   .slick-track {
     display: -webkit-flex;
+    display: -ms-flex;
     display: flex;
+
     -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
+
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .grid-x {
-    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
+
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .content {
     .title {
@@ -433,6 +446,7 @@ section.result-quiz {
     display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   .photo {
@@ -445,6 +459,7 @@ section.result-quiz {
     max-height: 400px;
   }
   .gift-row {
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .gifts > * {
@@ -486,6 +501,7 @@ section.result-quiz {
     top: -30px;
   }
   .grid-container > .grid-x {
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .title {
@@ -546,6 +562,7 @@ section.result-quiz {
   }
   @media screen and (min-width: 64em) {
     .deduction-row {
+      -ms-flex-pack: center;
       justify-content: center;
       position: relative;
     }
@@ -586,12 +603,15 @@ section.result-quiz {
     display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 }
 
 footer {
   .grid-x {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   .logo-container {
@@ -610,6 +630,7 @@ footer {
     -webkit-flex-direction: row;
     flex-direction: row;
     -webkit-justify-content: space-around;
+    -ms-flex-pack: center;
     justify-content: space-around;
     text-align: center;
     padding: 0 55px;
@@ -632,6 +653,7 @@ footer {
       display: flex;
       -webkit-flex-direction: row;
       flex-direction: row;
+      -ms-flex-pack: center;
       justify-content: space-between;
     }
     p {
