@@ -660,6 +660,7 @@ footer {
       @extend .font-bold;
     }
     .text {
+      display: block;
       margin-bottom: 0;
       line-height: 2.2;
       margin-right: 9px;
