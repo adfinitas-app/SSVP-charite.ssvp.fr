@@ -57,14 +57,14 @@ $(document).ready(function() {
 	 dataType: 'json',
 	 success: function(data) {
 	   if (data.error == true) {
-	     alert('API Error 2');
+	     console.error('API Error 2');
 	   } else {
 	     products = data.products;
 	     hideUnavailable(products);
 	   }
 	 },
 	 error: function() {
-	   alert('API Error 1');
+	   console.error('API Error 1');
 	 }
   });
 
