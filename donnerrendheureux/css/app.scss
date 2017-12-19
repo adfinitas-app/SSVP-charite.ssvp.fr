@@ -84,13 +84,30 @@ p {
 }
 
 .sticky {
+  padding: 30px 0 0 0;
   pointer-events: none;
 }
 .buttons {
   text-align: right;
-  padding: 30px;
+  padding: 0 30px;
   .state-1 {
     display: block;
+	.don-150
+	{
+		color: #cd9e69;
+		text-align: left;
+		display: inline-block;
+		line-height: 1.2;
+		@media screen and (max-width: 39.9375em) {
+			max-width: 140px;
+		}
+		@media screen and (min-width: 40em) and (max-width: 63.9475em) {
+			max-width: 195px;
+		}
+		@media screen and (min-width: 64em) {
+			max-width: 335px;
+		}
+	}
   }
   .state-2 {
     display: none;
@@ -552,13 +569,22 @@ section.result-quiz {
   }
   .don-button {
     text-align: center;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
     padding-top: 40px;
     .button {
       color: #c49158;
       border-color: #c49158;
       background-color: white;
     }
+	.don-150
+	{
+		display: block;
+		text-align: center;
+		color: #cd9e69;
+		line-height: 1.2;
+		padding-bottom: 40px;
+		font-weight: bold;
+	}
   }
   @media screen and (min-width: 64em) {
     .deduction-row {
