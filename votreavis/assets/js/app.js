@@ -82,7 +82,7 @@ function checkSelectAnswer(nb) {
     return check;
 }
 
-$(document).bind('mousewheel', function(e) {
+$('body').bind('touchmove', function(e) {
     if ($('#questionnaire').css('display') === "none" && $('#begin').css('display') === "block") {
         $('#questionnaire').show();
 
