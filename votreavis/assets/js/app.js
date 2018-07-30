@@ -99,7 +99,6 @@ $('body').bind('touchmove', function(e) {
 
 
 $('.next-screen').click( function () {
-    $(this).remove();
     $('#questionnaire').show();
 
 
@@ -109,6 +108,7 @@ $('.next-screen').click( function () {
     scrollToNext($('#questionnaire'), function () {
         $("body").css("overflow", "visible");
         $('#begin').hide();
+        $(this).remove();
     });
 });
 
