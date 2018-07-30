@@ -104,7 +104,7 @@
 	font-size: 20px;
 	line-height: 1.1;
 }
-#next {
+.next-screen {
 	visibility: hidden;
 	position: absolute;
 	left: 0;
@@ -118,9 +118,19 @@
 	-o-transition: all 0.5s, color 0.5s ease, border-color 0.5s ease;
 	transition: all 0.5s, color 0.5s ease, border-color 0.5s ease;
 }
-#next:focus, #next:hover {
+.next-screen:focus, .next-screen:hover {
 	cursor: pointer;
-	transform: scale(1.1);
+	transform: scale(1.05);
+}
+a.next-screen {
+	background-color: white;
+	color: #475e97;
+	font-family: 'Museo 500', serif;
+	font-size: 24px;
+	padding: 7px 15px;
+	max-width: 100%;
+	width: 250px;
+	text-align: center;
 }
 
 
@@ -207,8 +217,8 @@ form h5 {
 	padding: 5px 20px 20px;
 }
 .container-form p.juridique {
-	margin-top: 20px;
-	margin-bottom: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 .container-form p.obligatoire,
 .container-form p.juridique,
@@ -220,7 +230,8 @@ form h5 {
 	color: white !important;
 }
 .container-form p.obligatoire {
-	text-align: center !important;;
+	text-align: center !important;
+	margin-bottom: 0 !important;
 }
 form ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: #949393;
@@ -234,7 +245,22 @@ form :-ms-input-placeholder { /* Internet Explorer 10-11 */
 form ::-ms-input-placeholder { /* Microsoft Edge */
 	color: #949393;
 }
-
+form .optin {
+	margin-top: 5px;
+}
+form .optin input {
+	display: inline-block !important;
+	vertical-align: super;
+	height: 15px !important;
+	width: 15px !important;
+}
+form .optin label {
+	width: 80%;
+	line-height: 1.1;
+	font-size: 10px;
+	font-family: "Museo 300", serif;
+	color: white;
+}
 
 
 #questionnaire {
@@ -387,13 +413,14 @@ form ::-ms-input-placeholder { /* Microsoft Edge */
 		font-size: 21px;
 	}
 	.accroche .left .text p {
-		font-size: 14px;
+		font-size: 18px;
 	}
 
 	form input,
 	form select {
 		width: 100% !important;
 		max-width: 100% !important;
+		height: 40px !important;
 	}
 	.round.margin {
 		margin-right: 30px;
@@ -435,7 +462,7 @@ form ::-ms-input-placeholder { /* Microsoft Edge */
 		width: 100%;
 	}
 	.container-form p.obligatoire, .container-form p.juridique, .container-form p.juridique a {
-		font-size: 9px;
+		font-size: 9px !important;
 		line-height: 1.2;
 	}
 	#merci .container-title p span {

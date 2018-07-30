@@ -18,6 +18,7 @@ var lastQuestion = false;
 var loop = false;
 
 $(document).ready( function () {
+
     $("#f_phone").intlTelInput({
         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.13/js/utils.js",
         initialCountry: "fr"
@@ -28,17 +29,20 @@ $(document).ready( function () {
         $('.accroche .left .title h1').css('visibility','visible').hide().fadeIn("slow");
         $('.accroche .left .title h2').css('visibility','visible').hide().fadeIn("slow", function () {
             $('.accroche .left .text p').css('visibility','visible').hide().fadeIn("slow", function () {
-                $('#next').css('visibility','visible').hide().fadeIn("slow", function () {
-                    var i = 0;
-                    setInterval(function(){
-                        if (i % 2 === 0) {
-                            $("#next").css('bottom','10px');
-                        }
-                        else {
-                            $("#next").css('bottom','20px');
-                        }
-                        i++;
-                    },500);
+                $('.next-screen').css('visibility','visible').hide().fadeIn("slow", function () {
+                    if ($(window).width() < 640) {
+                        var i = 0;
+                        setInterval(function(){
+                            if (i % 2 === 0) {
+                                $("#next").css('bottom','10px');
+                            }
+                            else {
+                                $("#next").css('bottom','20px');
+                            }
+                            i++;
+                        },500);
+                    }
+
                 });
             });
 
@@ -78,8 +82,23 @@ function checkSelectAnswer(nb) {
     return check;
 }
 
+$(document).bind('mousewheel', function(e) {
+    if ($('#questionnaire').css('display') === "none" && $('#begin').css('display') === "block") {
+        $('#questionnaire').show();
 
-$('#next').click( function () {
+
+        initSlider();
+
+        $("body").css("overflow", "hidden");
+        scrollToNext($('#questionnaire'), function () {
+            $("body").css("overflow", "visible");
+            $('#begin').hide();
+        });
+    }
+});
+
+
+$('.next-screen').click( function () {
     $(this).remove();
     $('#questionnaire').show();
 
