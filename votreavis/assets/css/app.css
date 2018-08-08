@@ -96,6 +96,7 @@
 }
 .accroche .left .text {
 	margin-top: 40px;
+	margin-bottom: 30px;
 }
 .accroche .left .text p {
 	visibility: hidden;
@@ -103,6 +104,9 @@
 	font-family: 'Museo 300', serif;
 	font-size: 20px;
 	line-height: 1.1;
+}
+.next-screen.large {
+	position: static;
 }
 .next-screen {
 	visibility: hidden;
@@ -250,14 +254,15 @@ form .optin {
 }
 form .optin input {
 	display: inline-block !important;
-	vertical-align: super;
+	vertical-align: top;
 	height: 15px !important;
 	width: 15px !important;
+	margin-bottom: 0 !important;
 }
 form .optin label {
 	width: 80%;
 	line-height: 1.1;
-	font-size: 10px;
+	font-size: 13px;
 	font-family: "Museo 300", serif;
 	color: white;
 }
@@ -421,6 +426,9 @@ form .optin label {
 		width: 100% !important;
 		max-width: 100% !important;
 		height: 40px !important;
+	}
+	form .optin label {
+		font-size: 11px;
 	}
 	.round.margin {
 		margin-right: 30px;
