@@ -151,8 +151,7 @@ $('form').submit( function (e) {
     $('.error').hide();
 
     if (validateForm()) {
-        if (getOptin() === "true")
-            sendData(getAnswer());
+        sendData(getAnswer());
         $('#merci').show();
         scrollToNext($('#merci'), function () {
             $('#section-form').hide();

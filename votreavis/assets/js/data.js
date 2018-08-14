@@ -19,6 +19,7 @@ function sendData(q) {
             /* Variables de configuration de la fiche utilisateur, préfixe : "cv_" */
 
             "cv_email": pureField($('#f_email').val()),
+            "cv_optin": getOptin(),
 
 
             /* Variables de l'événement, : préfixe : "ce_" */
@@ -48,6 +49,7 @@ function sendNPS(q) {
             /* Variables de configuration de la fiche utilisateur, préfixe : "cv_" */
 
             "cv_email": pureField($('#f_email').val()),
+            "cv_optin": getOptin(),
 
             /* Variables de l'événement, : préfixe : "ce_" */
 
@@ -90,7 +92,7 @@ function createCORSRequest(method, url) {
     return xhr;
 }
 function makeCorsRequest(data) {
-    var url = '';
+    var url = 'https://adfinitas-io.herokuapp.com/api/v1/organization/afaddb65-74df-4628-86b2-01233d87a8df/webhook/6608e5b5-8f7f-4f0a-9798-1fb5339562ae';
     var body = JSON.stringify(data);
     var xhr = createCORSRequest('POST', url);
     if (!xhr) {
@@ -127,8 +129,6 @@ function getPersonnalisation() {
 
 function getList() {
     var data = [];
-    if (!$('#f_optin').is(":checked"))
-        data.push("fermes_sang");
 
     return data;
 }
@@ -140,9 +140,9 @@ function pureField(string) {
 
 function getOptin() {
     if ($('#f_optin').is(":checked")) {
-        return "false";
+        return "NON";
     }
-    return "true";
+    return "OUI";
 }
 
 function getSexe() {
