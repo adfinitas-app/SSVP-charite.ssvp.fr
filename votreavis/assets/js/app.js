@@ -151,7 +151,10 @@ $('form').submit( function (e) {
     $('.error').hide();
 
     if (validateForm()) {
-        sendData(getAnswer());
+        if (getOptin() === "OUI") {
+            sendData(getAnswer());
+        }
+
         $('#merci').show();
         scrollToNext($('#merci'), function () {
             $('#section-form').hide();

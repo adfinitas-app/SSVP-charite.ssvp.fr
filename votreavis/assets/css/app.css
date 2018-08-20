@@ -79,7 +79,7 @@
 	visibility: hidden;
 	color: white;
 	font-family: 'Museo 700', serif;
-	font-size: 47px;
+	font-size: 2.9rem;
 	text-transform: uppercase;
 	line-height: 1.1;
 }
@@ -87,7 +87,7 @@
 	visibility: hidden;
 	color: white;
 	font-family: 'Museo 300', serif;
-	font-size: 35px;
+	font-size: 2.18rem;
 	text-transform: uppercase;
 	line-height: 1.1;
 }
@@ -102,7 +102,7 @@
 	visibility: hidden;
 	color: white;
 	font-family: 'Museo 300', serif;
-	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: 1.1;
 }
 .next-screen.large {
