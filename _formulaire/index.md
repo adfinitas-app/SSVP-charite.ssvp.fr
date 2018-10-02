@@ -59,7 +59,7 @@ panneau_question:
 panneau_informations_personnelles:
   fond_image_path:
   fond_color:
-  texte_html: ''
+  texte_html: '<p>En répondant à cette consultation, vous acceptez de recevoir les informations de la SSVP. Pour plus d’informations concernant vos données personnelles, vous pouvez contacter Philippe Ronsin par email à l’adresse <a href="mailto:rgpd@ssvp.fr">rgpd@ssvp.fr</a>.</p>'
   champs:
     - type: champ_libre_court
       nom_machine: lastname
@@ -100,27 +100,14 @@ panneau_informations_personnelles:
         controle: telephone
         fond_image_path:
         fond_color:
-    - type: choix_multiple
-      nom_machine: optinnps
-      reponses:
-        - valeur: Je souhaite recevoir les lettres d’information de la Société de Saint-Vincent-de-Paul
-      options:
-        propriete_visiteur: true
-        label:
-        placeholder:
-        requis: false
-        message_erreur:
-        controle:
-        fond_image_path:
-        fond_color:
 options:
   bouton_de_soumission: Je valide
   page_de_remerciement_path: /merci.html
   largeur_champ: '100%'
   champs_caches_liste:
-    - nom:
-      valeur:
-      propriete_visiteur: false
+    - nom: optinnps
+      valeur: Je souhaite recevoir les lettres d’information de la Société de Saint-Vincent-de-Paul
+      propriete_visiteur: true
   meta:
     title: Questionnaire
     description:
