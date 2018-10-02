@@ -73,11 +73,10 @@ $(document).ready(function() {
   $(".sticky").sticky({
 		      zIndex: 1
   });
-  $('.sticky .state-1 .button').on('click', function(e) {
-    e.preventDefault();
-    $('.sticky .state-1').hide();
-    $('.sticky .state-2').addClass('show');
-  });
+  //$('.sticky .state-1 .button').on('click', function(e) {
+    //$('.sticky .state-1').hide();
+    //$('.sticky .state-2').addClass('show');
+  //});
 
   $(".partagez-slider").slick({
 			      nextArrow: $('.partagez .next-slider'),

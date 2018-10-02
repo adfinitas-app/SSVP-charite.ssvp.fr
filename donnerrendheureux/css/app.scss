@@ -552,7 +552,7 @@ section.result-quiz {
   }
   .don-button {
     text-align: center;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
     padding-top: 40px;
     .button {
       color: #c49158;
@@ -697,4 +697,72 @@ footer {
   -moz-transform: scale(1);
   transition: all 200ms ease-in;
   transform: scale(1);
+}
+
+/* Fix */
+
+
+header .text-don
+{
+	color: #cd9e69;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: left;
+	margin-bottom: 0;
+	display: inline-block;
+	line-height: 1.2;
+	font-size: 16px;
+}
+
+@media screen and (max-width: 39.9375em) {
+	header {
+		height: 620px;
+	}
+
+	header .text-don
+	{
+		width: 140px;
+		font-size: 15px;
+	}
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em){
+	header .text-don
+	{
+		width: 195px;
+	}
+}
+@media screen and (min-width: 64em) {
+	header .text-don
+	{
+		width: 335px;
+	}
+}
+
+section.grid-gift .text-don
+{
+	color: #c49158;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	margin-bottom: 0;
+	display: block;
+	line-height: 1.2;
+	padding-bottom: 40px;
+	padding-top: 25px;
+	font-size: 18px;
+}
+
+section.partagez .text-don
+{
+	color: #c49158;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: left;
+	margin-bottom: 0;
+	display: block;
+	line-height: 1.2;
+	padding-bottom: 40px;
+	padding-top: 25px;
+	font-size: 18px;
 }
