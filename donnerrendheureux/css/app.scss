@@ -13,8 +13,13 @@
   font-style: normal;
 }
 
-:focus {outline:none;}
-::-moz-focus-inner {border:0;}
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
 
 .nonbreak {
   white-space: nowrap
@@ -24,6 +29,7 @@
   @extend .font-bold;
   text-transform: uppercase;
 }
+
 .title-container {
   .quote {
     @extend .title;
@@ -43,17 +49,18 @@
     .first {
       font-size: 100px;
       @media screen and (max-width: 39.9375em) {
-	font-size: 60px;
+        font-size: 60px;
       }
     }
     .second {
       font-size: 56px;
       @media screen and (max-width: 39.9375em) {
-	font-size: 30px;
+        font-size: 30px;
       }
     }
   }
 }
+
 .subtitle {
   font-size: 20px;
   text-align: center;
@@ -65,9 +72,11 @@
     display: block;
   }
 }
+
 .hide-mobile {
   display: none;
 }
+
 @media screen and (min-width: 64em) {
   .hide-mobile {
     display: block;
@@ -86,6 +95,7 @@ p {
 .sticky {
   pointer-events: none;
 }
+
 .buttons {
   text-align: right;
   padding: 30px;
@@ -183,6 +193,7 @@ header {
     }
   }
 }
+
 section.partagez {
   //padding-top: 40px;
   padding-bottom: 40px;
@@ -245,6 +256,7 @@ section.partagez {
     z-index: 10;
   }
 }
+
 .slide-row {
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -327,12 +339,12 @@ section.quiz {
     }
   }
   input[type="radio"] {
-    display:none;
+    display: none;
   }
   input[type="radio"] + label span {
     height: 19px;
     width: 19px;
-    display:inline-block;
+    display: inline-block;
     vertical-align: middle;
     padding: 0 0 0 0px;
     background-image: url("../img/radio.png");
@@ -476,7 +488,7 @@ section.result-quiz {
 
 .grid-gift {
   background-image: url("../img/stars-3.png");
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-position: 45% -45px;
   padding-top: 80px;
   padding-bottom: 40px;
@@ -529,20 +541,20 @@ section.result-quiz {
       padding: 50px 30px;
       text-align: center;
       p:nth-child(1) {
-	color: #c49158;
-	font-size: 104px;
-	line-height: 0.6;
-	@extend .font-reg;
+        color: #c49158;
+        font-size: 104px;
+        line-height: 0.6;
+        @extend .font-reg;
       }
       p:nth-child(2) {
-	color: #c49158;
-	line-height: 1;
+        color: #c49158;
+        line-height: 1;
       }
       p:nth-child(3) {
-	@extend .font-reg;
-	font-size: 20px;
-	margin-bottom: 0;
-	line-height: 1.2;
+        @extend .font-reg;
+        font-size: 20px;
+        margin-bottom: 0;
+        line-height: 1.2;
       }
     }
     .button {
@@ -552,8 +564,7 @@ section.result-quiz {
   }
   .don-button {
     text-align: center;
-    padding-bottom: 0px;
-    padding-top: 40px;
+    padding: 40px 0;
     .button {
       color: #c49158;
       border-color: #c49158;
@@ -670,9 +681,11 @@ footer {
     display: inline-block;
   }
 }
+
 .reveal-anim {
   visibility: hidden;
 }
+
 .reveal-anim.animate {
   visibility: visible;
 }
@@ -701,68 +714,108 @@ footer {
 
 /* Fix */
 
-
-header .text-don
-{
-	color: #cd9e69;
-	font-weight: bold;
-	font-size: 16px;
-	text-align: left;
-	margin-bottom: 0;
-	display: inline-block;
-	line-height: 1.2;
-	font-size: 16px;
+header .text-don {
+  color: #cd9e69;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 0;
+  display: inline-block;
+  line-height: 1.2;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 39.9375em) {
-	header {
-		height: 620px;
-	}
+  header {
+    height: 620px;
+  }
 
-	header .text-don
-	{
-		width: 140px;
-		font-size: 15px;
-	}
+  header .text-don {
+    width: 140px;
+    font-size: 15px;
+  }
 }
 
-@media screen and (min-width: 40em) and (max-width: 63.9375em){
-	header .text-don
-	{
-		width: 195px;
-	}
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  header .text-don {
+    width: 195px;
+  }
 }
+
 @media screen and (min-width: 64em) {
-	header .text-don
-	{
-		width: 335px;
-	}
+  header .text-don {
+    width: 335px;
+  }
 }
 
-section.grid-gift .text-don
-{
-	color: #c49158;
-	font-weight: bold;
-	font-size: 16px;
-	text-align: center;
-	margin-bottom: 0;
-	display: block;
-	line-height: 1.2;
-	padding-bottom: 40px;
-	padding-top: 25px;
-	font-size: 18px;
+section.grid-gift .text-don {
+  color: #c49158;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 0;
+  display: block;
+  line-height: 1.2;
+  padding-bottom: 40px;
+  padding-top: 25px;
+  font-size: 18px;
 }
 
-section.partagez .text-don
-{
-	color: #c49158;
-	font-weight: bold;
-	font-size: 16px;
-	text-align: left;
-	margin-bottom: 0;
-	display: block;
-	line-height: 1.2;
-	padding-bottom: 40px;
-	padding-top: 25px;
-	font-size: 18px;
+section.partagez .text-don {
+  color: #c49158;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 0;
+  display: block;
+  line-height: 1.2;
+  padding-bottom: 40px;
+  padding-top: 25px;
+  font-size: 18px;
+}
+
+.brownHeadbandContainer {
+  background-color: #c4915819;
+}
+
+.brownHeadband {
+  font-family: 'neuzeit-grotesk', sans-serif;
+  font-size: 21px;
+  color: #cd9e69;
+  line-height: normal;
+  margin-bottom: 0 !important;
+  padding: 20px 0;
+}
+
+.donationGift {
+  padding-top: 50px;
+}
+
+.donationGift h3 {
+  font-family: "neuzeit-grotesk", sans-serif;
+  color: #c49158;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.donationGift p {
+  font-family: "neuzeit-grotesk", sans-serif;
+  color: #c49158;
+  font-size: 20px;
+}
+
+.taxeReductionText {
+  font-family: "neuzeit-grotesk", Arial, sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  color: #4f4f4f !important;
+}
+
+@media screen and (max-width: 64em) {
+  .small-float-center {
+      display: block !important;
+      max-width: 195px;
+      margin-right: auto !important;
+      margin-left: auto !important;
+  }
 }
