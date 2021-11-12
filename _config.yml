@@ -1,5 +1,4 @@
 array: []
-version: 3.2.1
 woopra_config:
   domain: "ssvp.fr"
   cookie_domain: ".ssvp.fr"
