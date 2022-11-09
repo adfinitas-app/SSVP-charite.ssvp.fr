@@ -11592,10 +11592,20 @@ html {
     position: absolute
 }
 
-.flake--header {
-    height: 266px;
-    right: 15%;
-    top: 30%
+@media (max-width:500px) {
+    .flake--header {
+        height: 133px;
+        right: 15%;
+        top: 20%
+    }
+}
+
+@media (min-width:500px) {
+    .flake--header {
+        height: 266px;
+        right: 15%;
+        top: 30%
+    }
 }
 
 .flake--donate {
