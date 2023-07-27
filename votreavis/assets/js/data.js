@@ -1,45 +1,18 @@
 
 function sendData(q) {
     var data = {
-        "db": {
-            "schema": "ssvp_scoring_2018",
-            "db": {
-                "email": pureField($('#f_email').val()),
-                "phone": pureField(getPhone()),
-                "language": "fr_FR",
-                "quest_1_connaissanceSSVP": q[0],
-                "quest_2_partagevaleurs": q[1],
-                "quest_3_actionsproximite": q[2],
-                "quest_5_don": q[4],
-            }
-        },
-        "woopra": {
-            "host": "ssvp.fr",			// Nom du projet dans Woopra.
-
-            /* Variables de configuration de la fiche utilisateur, préfixe : "cv_" */
-
-            "cv_email": pureField($('#f_email').val()),
-            "cv_optin": getOptin(),
-
-
-            /* Variables de l'événement, : préfixe : "ce_" */
-
-            "event": "scoring_18",				// Nom de l'événement à tracker si applicable. Non préfixé.
-
-            "ce_quest_1_connaissanceSSVP": q[0],
-            "ce_quest_2_partagevaleurs": q[1],
-            "ce_quest_3_actionsproximite": q[2],
-            "ce_quest_5_don": q[4],
-        }
+        "email": pureField($('#f_email').val()),
+        "phone": pureField(getPhone()),
+        "language": "fr_FR",
+        "event":"scoring_18",
+        "quest_1_connaissanceSSVP": q[0],
+        "quest_2_partagevaleurs": q[1],
+        "quest_3_actionsproximite": q[2],
+        "quest_5_don": q[4],
+        "optin": getOptin(),
+        "nps":q[3]
     };
-    if (pureField(getPhone()) != ""){
-        data.woopra["cv_phone"] = pureField(getPhone());
-        data.woopra["ce_phone"] = pureField(getPhone());
-    }
-    //console.log(data);
     makeCorsRequest(data);
-
-    sendNPS(q[3]);
 }
 function sendNPS(q) {
     var data = {
@@ -92,7 +65,7 @@ function createCORSRequest(method, url) {
     return xhr;
 }
 function makeCorsRequest(data) {
-    var url = 'https://adfinitas-io.herokuapp.com/api/v1/organization/afaddb65-74df-4628-86b2-01233d87a8df/webhook/6608e5b5-8f7f-4f0a-9798-1fb5339562ae';
+    var url = 'https://collector.calicut.adfinitas.io/3bdf94b9-416f-4086-a0ca-77734d52bff9';
     var body = JSON.stringify(data);
     var xhr = createCORSRequest('POST', url);
     if (!xhr) {
